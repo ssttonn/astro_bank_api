@@ -25,4 +25,7 @@ sqlc:
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres_container createdb dropdb
+server:
+	go run main.go
+
+.PHONY: postgres_container createdb dropdb enterdb migrateup migratedown sqlc test server
